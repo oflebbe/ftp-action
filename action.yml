@@ -1,6 +1,6 @@
 name: 'ftp-action'
-author: 'Sebastian Popp <ftp-action@sebastianpopp.com>'
-description: 'Automate copying your files via FTP using this GitHub action.'
+author: 'Olaf Flebbe <ftp-action@oflebbe.de'
+description: 'Automate copying your files via FTP using this GitHub action. (Shameless clone from Sebastan Popp)'
 inputs:
   host:
     description: 'FTP host'
@@ -19,6 +19,10 @@ inputs:
     description: 'Remote directory'
     required: false
     default: '.'
+  excludeDir:
+    description: 'Directory to exclude'
+    required: false
+    default: ''
 runs:
   using: 'docker'
   image: 'Dockerfile'
